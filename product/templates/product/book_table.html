@@ -1,0 +1,16 @@
+{% extends 'product/main.html' %}
+{% load static %}
+{% block title%}BOOK_TABLE{% endblock title%}
+{% block body %}
+
+<form method="POST">
+    {% csrf_token %}
+<div style="background-image:url('http://127.0.0.1:8000/static/product/images/tbl.jpg');background-repeat:no-repeat; ">
+    
+<table border="3" style="margin-left:auto; margin-right:auto; background-color:beige">
+    <h1 style="text-align:center; color:brown"><b>BOOKING</b></h1>
+    {{forms}}
+    <tr><td colspan="2" ><button type="submit" style="width:570px">Book</button></td></tr>
+
+</div>
+</table></form>{% endblock body %}

@@ -1,0 +1,16 @@
+{% extends 'product/main.html' %}
+{% load static %}
+{%  block title %}REGISTERATION{% endblock title %}
+{%block body%}
+<form method="POST">
+    {% csrf_token %}
+    <h1 style="text-align:center">REGISTERATION</h1>
+<table border="3" style="margin-left:auto;margin-right:auto">
+    {{forms}}
+    <tr><td colspan="2"><button type='submit' style="width:700px;height:40px;">REGISTER</button></td></tr>
+    <tr><td colspan="2"><a href="{%  url 'login' %}">Already have an account? Log In</a></td></tr>
+   
+</table>
+
+</form>
+{%endblock body%}
